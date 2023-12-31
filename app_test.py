@@ -194,7 +194,12 @@ def VideoRecognition():
 
 
 RTC_CONFIGURATION = RTCConfiguration(
-    {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+    {"iceServers": [
+        {"urls": ["stun:stun.l.google.com:19302"]},
+        {"urls": "turn:your_turn_server_address",
+         "username": "your_turn_username",
+         "credential": "your_turn_credential"}
+    ]}
 )
 
 class VideoProcessor():
@@ -301,7 +306,9 @@ def RealTime_train( cap):
         submit = st.form_submit_button('Submit')
     if username:
         embs = []
-        ctx = webrtc_streamer(key="example", video_frame_callback=video_frame_callback)
+        ctx = webrtc_streamer(key="example", 
+                              rtc_configuration=RTC_CONFIGURATION,
+                              video_frame_callback=video_frame_callback)
         
         while ctx.state.playing:
             with lock:
