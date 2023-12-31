@@ -8,6 +8,7 @@ import base64
 import av
 import threading
 import os
+import dotenv
 
 from twilio.rest import Client
 from PIL import Image
@@ -193,6 +194,7 @@ def VideoRecognition():
                     file_name="result.mp4",
                     mime="video/mp4")
 
+dotenv.load_dotenv()
 account_sid = os.environ['TWILIO_ACCOUNT_SID']
 auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
