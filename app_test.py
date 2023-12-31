@@ -7,7 +7,9 @@ import tempfile
 import base64
 import av
 import threading
+import os
 
+from twilio.rest import Client
 from PIL import Image
 from facenet_pytorch import MTCNN, InceptionResnetV1
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
@@ -191,15 +193,14 @@ def VideoRecognition():
                     file_name="result.mp4",
                     mime="video/mp4")
 
+account_sid = os.environ['AC64c72be2ff3348ac72188a37a7a89bf9']
+auth_token = os.environ['eb635fbb6fc877ae722770dae51cacfe']
+client = Client(account_sid, auth_token)
 
+token = client.tokens.create()
 
 RTC_CONFIGURATION = RTCConfiguration(
-    {"iceServers": [
-        {"urls": ["stun:stun.l.google.com:19302"]},
-        {"urls": "turn:your_turn_server_address",
-         "username": "your_turn_username",
-         "credential": "your_turn_credential"}
-    ]}
+    {"iceServers": token.ice_servers}
 )
 
 class VideoProcessor():
