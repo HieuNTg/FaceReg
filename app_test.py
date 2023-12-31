@@ -474,13 +474,13 @@ if __name__ == "__main__":
     if add_selectbox == "Recognition":
         with st.sidebar:
             add_radio = st.radio("What do you want to choice?",
-                            ("Image", "Video", "Real-Time"))
+                            ("Image", "Video"))
         if (add_radio=="Image"):
             ImageRecognition()
         elif (add_radio=="Video"):
             VideoRecognition()
-        else:
-            Real_timeRecognition(usernames, model_weights, euclidean_distance, cap)
+        # else:
+        #     Real_timeRecognition(usernames, model_weights, euclidean_distance, cap)
     else:
         with st.sidebar:
             add_radio = st.radio("What do you want to choice?",
