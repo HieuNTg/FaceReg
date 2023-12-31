@@ -212,7 +212,7 @@ class VideoProcessor():
     def recv(self, frame):
         self.frame_count += 1  # Increment frame counter
 
-        if self.frame_count % 2 == 0:  
+        if self.frame_count % 3 == 0:  
             img = frame.to_ndarray(format="bgr24")
             img = process(img)  # Apply your processing logic here
             return av.VideoFrame.from_ndarray(img, format="bgr24")
