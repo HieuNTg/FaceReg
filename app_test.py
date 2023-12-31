@@ -193,8 +193,8 @@ def VideoRecognition():
                     file_name="result.mp4",
                     mime="video/mp4")
 
-account_sid = os.environ['AC64c72be2ff3348ac72188a37a7a89bf9']
-auth_token = os.environ['7a5e11111c595953b0bc3f6fd7c3296a']
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
 
 token = client.tokens.create()
