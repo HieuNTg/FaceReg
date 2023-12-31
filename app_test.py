@@ -128,7 +128,7 @@ def process(frame):
 
 def ImageRecognition():
     st.title("Demo FaceRecognition")
-    set_background('Images\img_reg.gif')
+    set_background('img_reg.gif')
     
     uploaded_file = st.file_uploader("Choose a image", type=['png', 'jpeg', 'jpg'])
     if uploaded_file is not None:
@@ -140,7 +140,7 @@ def ImageRecognition():
         
 def VideoRecognition():  
     st.title("Demo FaceRecognition")
-    set_background('Images\img_reg.gif')
+    set_background('img_reg.gif')
     uploaded_file = st.file_uploader("Choose a video...", type=["mp4"])
     col1, col2 = st.columns(2)
     temporary_location = False
@@ -213,7 +213,7 @@ class VideoProcessor():
 
 def Real_timeRecognition( usernames, model_weights, ec, cap):  
     st.title("Demo FaceRecognition RealTime")
-    set_background('Images\img_reg.gif')
+    set_background('img_reg.gif')
     
     webrtc_ctx = webrtc_streamer(
         key="WHO",
@@ -228,7 +228,7 @@ def Video_train():
     global usernames 
     global model_weights
     st.title("Train by UpLoad Video")
-    set_background('Images\img_reg.gif')
+    set_background('img_reg.gif')
     with st.form('form1'):
         username = st.text_input('User name:',  max_chars=100)
         submit = st.form_submit_button('Submit')
@@ -293,7 +293,7 @@ def RealTime_train( cap):
     global usernames 
     global model_weights
     st.title("Train by Realtime")
-    set_background('Images\img_reg.gif')
+    set_background('img_reg.gif')
     submit = False
     with st.form('form1'):
         username = st.text_input('User name:',  max_chars=100)
@@ -347,7 +347,7 @@ if __name__ == "__main__":
         "What do you want to do?",
         ("Recognition", "Train a new face")
     )
-    set_background_sidebar("Images\download.jpg")
+    set_background_sidebar("download.jpg")
     st.sidebar.markdown(
     """
     <style>
