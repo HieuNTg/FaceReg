@@ -2,4 +2,5 @@ facenet-pytorch==2.5.3
 opencv-python
 scikit-learn
 streamlit==1.29.0
+streamlit_webrtc==0.47.1
 
