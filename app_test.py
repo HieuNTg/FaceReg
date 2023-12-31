@@ -194,7 +194,7 @@ def VideoRecognition():
                     mime="video/mp4")
 
 account_sid = os.environ['AC64c72be2ff3348ac72188a37a7a89bf9']
-auth_token = os.environ['eb635fbb6fc877ae722770dae51cacfe']
+auth_token = os.environ['7a5e11111c595953b0bc3f6fd7c3296a']
 client = Client(account_sid, auth_token)
 
 token = client.tokens.create()
