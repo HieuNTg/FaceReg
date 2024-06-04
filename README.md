@@ -6,9 +6,14 @@
   
 ## Dataset
 - Please download the dataset here: https://www.kaggle.com/datasets/vasukipatel/face-recognition-dataset
+- Dataset includes 2562 images, divided into 31 classes:
+  - Divide the dataset into 70% for the training set and 30% for the test set.
+
+## Pipline
+![image](https://github.com/HieuNTg/FaceReg/assets/96096473/1eaf85e0-95f4-449d-9f4f-6b8f29e8aa81)
+
 
 ## Result
-
 ![image](https://github.com/HieuNTg/FaceReg/assets/96096473/1e420dbd-0df3-4cfd-97f6-58e2117a348f) ![image](https://github.com/HieuNTg/FaceReg/assets/96096473/31cd7a58-d2e0-49ed-93a9-a6867d42a946)
 
 
