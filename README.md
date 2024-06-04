@@ -10,7 +10,8 @@
   - Divide the dataset into 70% for the training set and 30% for the test set.
 
 ## Pipline
-![image](https://github.com/HieuNTg/FaceReg/assets/96096473/1eaf85e0-95f4-449d-9f4f-6b8f29e8aa81)
+![image](https://github.com/HieuNTg/FaceReg/assets/96096473/a4edc90e-5d74-42d4-bc74-90d17968a229)
+
 
 
 ## Result
