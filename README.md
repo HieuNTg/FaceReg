@@ -34,6 +34,20 @@ Input (Image / Video / Camera)
 - **ML Evaluation:** Scikit-learn (SVM comparison in notebooks)
 - **Deployment:** Docker
 
+## Demo & Results
+
+### Processing Pipeline
+> Image → MTCNN Detection → InceptionResnetV1 Encoding → Euclidean Matching → Output
+
+![Pipeline](https://github.com/HieuNTg/FaceReg/assets/96096473/a4edc90e-5d74-42d4-bc74-90d17968a229)
+
+### Recognition Results
+
+| Image Recognition | Video Recognition |
+|:-:|:-:|
+| ![Image mode](https://github.com/HieuNTg/FaceReg/assets/96096473/1e420dbd-0df3-4cfd-97f6-58e2117a348f) | ![Video mode](https://github.com/HieuNTg/FaceReg/assets/96096473/31cd7a58-d2e0-49ed-93a9-a6867d42a946) |
+| Upload image → detect & identify face | Process video frames with bounding box overlay |
+
 ## Performance
 
 | Metric | Value |
@@ -98,15 +112,6 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 |----------|----------|---------|
 | `notebooks/euclidean_distance.ipynb` | Euclidean Distance | Distance-based matching with averaged embeddings |
 | `notebooks/svm_classifier.ipynb` | SVM Classifier | Support Vector Machine on 512-d embeddings |
-
-## Pipeline
-
-![Pipeline](https://github.com/HieuNTg/FaceReg/assets/96096473/a4edc90e-5d74-42d4-bc74-90d17968a229)
-
-## Demo
-
-![Result 1](https://github.com/HieuNTg/FaceReg/assets/96096473/1e420dbd-0df3-4cfd-97f6-58e2117a348f)
-![Result 2](https://github.com/HieuNTg/FaceReg/assets/96096473/31cd7a58-d2e0-49ed-93a9-a6867d42a946)
 
 ## Future Improvements
 
