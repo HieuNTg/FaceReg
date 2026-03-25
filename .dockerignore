@@ -1,0 +1,10 @@
+.git/
+.env
+__pycache__/
+*.pyc
+notebooks/
+experiments/
+.dockerignore
+.gitignore
+.env.example
+README.md

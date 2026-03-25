@@ -1,1 +1,7 @@
 *.env
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+result.mp4
+testout_simple.mp4
